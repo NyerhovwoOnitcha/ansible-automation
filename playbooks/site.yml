@@ -9,12 +9,12 @@
   tags:
     - always
 
-- name: import database file
-  import_playbook: ../static-assignments/database.yml
+# - name: import database file
+#   import_playbook: ../static-assignments/database.yml
 
 # - name: import webservers file
 #   import_playbook: ../static-assignments/uatwebservers.yml
 
-# - name: import loadbalancers assignment
-#   import_playbook: ../static-assignments/loadbalancer.yml
-#   when: load_balancer_is_required
+- name: import loadbalancers assignment
+  import_playbook: ../static-assignments/loadbalancer.yml
+  when: load_balancer_is_required
