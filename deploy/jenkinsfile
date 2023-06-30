@@ -43,6 +43,14 @@
       }
     }
 
+    stage('Testing my cleanup') {
+      steps {
+        script{
+          sh 'echo "Testing my cleanup"'
+        }
+      }
+    }
+
     stage('Clean workspace after build') {
       steps {
         cleanWs()      
