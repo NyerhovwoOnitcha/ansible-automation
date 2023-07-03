@@ -5,16 +5,19 @@
  #   - always
   # - name: import webservers file
 #   import_playbook: ../static-assignments/uatwebservers.yml
-- name: include env-vars file
-  include: ../dynamic-assignments/env-vars.yml
-  tags:
-    - always
+# - name: include env-vars file
+#   include: ../dynamic-assignments/env-vars.yml
+#   tags:
+#     - always
 
-# - name: import database file
-#   import_playbook: ../static-assignments/database.yml
+- name: import database file
+  import_playbook: ../static-assignments/database.yml
+
+- name: import database file
+  import_playbook: ../static-assignments/nginx.yml
 
 
 
-- name: import loadbalancers assignment
-  import_playbook: ../static-assignments/loadbalancer.yml
-  when: load_balancer_is_required
+# - name: import loadbalancers assignment
+#   import_playbook: ../static-assignments/loadbalancer.yml
+#   when: load_balancer_is_required
