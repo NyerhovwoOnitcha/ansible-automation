@@ -1,60 +1,61 @@
-   pipeline {
-    agent any
 
-  stages {
-    stage('Initial Cleanup') {
-      steps {
-        dir("${WORKSPACE}") {
-          deleteDir()
-        }
+//    pipeline {
+//     agent any
+
+//   stages {
+//     stage('Initial Cleanup') {
+//       steps {
+//         dir("${WORKSPACE}") {
+//           deleteDir()
+//         }
           
-      }
-    }
+//       }
+//     }
     
-    stage('Build') {
-      steps {
-        script {
-          sh 'echo "Building Stage"'
-        }
-      }
-    }
+//     stage('Build') {
+//       steps {
+//         script {
+//           sh 'echo "Building Stage"'
+//         }
+//       }
+//     }
 
-    stage('Test') {
-      steps {
-        script {
-          sh 'echo "Testing Stage"'
-        }
-      }
-    }
+//     stage('Test') {
+//       steps {
+//         script {
+//           sh 'echo "Testing Stage"'
+//         }
+//       }
+//     }
 
-    stage('Package') {
-      steps {
-        script {
-          sh 'echo "Packaging Stage"'
-        }
-      }
-    }
+//     stage('Package') {
+//       steps {
+//         script {
+//           sh 'echo "Packaging Stage"'
+//         }
+//       }
+//     }
 
-    stage('Deploy') {
-      steps {
-        script {
-          sh 'echo "Deploying to app "'
-        }
-      }
-    }
+//     stage('Deploy') {
+//       steps {
+//         script {
+//           sh 'echo "Deploying to app "'
+//         }
+//       }
+//     }
 
-    stage('Testing my cleanup') {
-      steps {
-        script{
-          sh 'echo "Testing my cleanup"'
-        }
-      }
-    }
+//     stage('Testing my cleanup') {
+//       steps {
+//         script{
+//           sh 'echo "Testing my cleanup"'
+//         }
+//       }
+//     }
 
-    stage('Clean workspace after build') {
-      steps {
-        cleanWs()      
-      }
-    }
-    }
-}
+//     stage('Clean workspace after build') {
+//       steps {
+//         cleanWs()      
+//       }
+//     }
+//     }
+// }
