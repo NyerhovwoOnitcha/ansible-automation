@@ -16,7 +16,7 @@ pipeline {
 
     stage('checkout SCM') {
       steps {
-        git branch: 'main', url: ''
+        git branch: 'run-ansible', url: 'https://github.com/NyerhovwoOnitcha/ansible-automation.git'
       }
     }
 
