@@ -11,10 +11,12 @@
 #     - always
 
 - name: import database file
-  import_playbook: ../static-assignments/database.yml
+  import_playbook: ../static-assignments/nginx.yml
 
 - name: import database file
-  import_playbook: ../static-assignments/nginx.yml
+  import_playbook: ../static-assignments/database.yml
+
+
 
 
 
